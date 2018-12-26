@@ -1,0 +1,88 @@
+<html>
+<head>
+<style>
+input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button 
+{
+    -webkit-appearance:none;
+    margin:0;
+}
+</style>
+<script>
+function getbranch()
+{
+$(document).ready(function () {
+    $("#deg").change(function () {
+        var val = $(this).val();
+		if (val == "BTECH") {
+            $("#bra").html("<option value='CE'>Civil Engineering</option><option value='EEE'>Electrical and Electronics Engineering</option><option value='ME'>Mechanical Engineering</option><option value='ECE'>Electronics and Communications Engineeringg</option><option value='CSE'>Computer Science and Engineering</option><option value='EIE'>Electronics and Instrumentation Engineering</option><option value='IT'>Information Technology</option><option value='CSSE'>Computer Science and Systems Engineering</option>");
+        }
+		else if (val == "MTECH") {
+            $("#bra").html("<option value='EPS'>EPS</option><option value='EMS'>EMS</option><option value='VLSI'>VLSI</option><option value='CMS'>CMS</option><option value='CS'>CS</option><option value='CNIS'>CNIS</option><option value='SE'>SE</option>");
+        }
+		else if (val == "MCA") {
+            $("#bra").html("<option value='MCA'>MCA</option>");
+        }
+    });
+});
+}
+</script>
+</head>
+<body>
+<center>
+<div style="border-color:darkblue;background-color:#ffcc44;border-width:3px;border-style:solid;width:700;height:500;margin-left:50;">
+<form name="form2" id="regform" action="register.php" method="post">
+<fieldset style="width:600">
+<legend><h4>Registration</h4></legend>
+<table>
+<tr>
+<td>User Id</td>
+<td><input type="text" name="t1" maxlength="10" required> &nbsp;&nbsp; &nbsp;<span style="color:red;font-size:14pt">ID must be rollno/emp id</span></td>
+</tr>
+<tr>
+<td>Roll No:</td>
+<td><input type="text" name="t2" maxlength="10" required></td> 
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="t3" required></td>
+</tr>
+<tr>
+<td>Date of Birth:</td>
+<td><input type="date" name="t4" style="width:160;height:20" required></td>
+</tr>
+<tr>
+<td>Name of the student/employee:</td>
+<td><input type="text" name="t5" required></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td><input type="radio" name="t6" value="Male" required>Male
+<input type="radio" name="t6" value="Female" required>Female</td>
+</tr>
+<tr>
+<td>Academic Degree</td>
+<td><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+<select id="deg" name="t7" style="width:160;height:20" onchange="getbranch()" required>
+<option value="BTECH">B.Tech</option>
+<option value="MTECH">M.Tech</option>
+<option value="MCA">MCA</option>
+<option value="DR">Ph.D</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td><select id="bra" name="t8" style="width:160;height:20" required>
+<option value='CE'>Civil Engineering</option><option value='EEE'>Electrical and Electronics Engineering</option><option value='ME'>Mechanical Engineering</option><option value='ECE'>Electronics and Communications Engineeringg</option><option value='CSE'>Computer Science and Engineering</option><option value='EIE'>Electronics and Instrumentation Engineering</option><option value='IT'>Information Technology</option><option value='CSSE'>Computer Science and Systems Engineering</option>
+</select>
+</td>
+</tr>
+</table><br>
+<input type="submit" value="Register" name="submit">
+<input type="reset" value="Reset">
+</fieldset>
+</form>
+</div>
+</center>
+</body>
+</html>

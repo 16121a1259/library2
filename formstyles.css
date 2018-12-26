@@ -1,0 +1,27 @@
+	td.first{
+		
+		width:30px;
+	}
+	tr{
+		height:40px;
+	}
+	td.second{
+		
+		width:280px;
+	}
+	select{
+		width:200px;
+		height:25px;
+	}
+	td.third{
+		
+		width:240px;
+	}
+	input[type=text]{
+		width:200px;
+		height:25px;
+	}
+	input[type=date]{
+		width:200px;
+		height:25px;
+	}
